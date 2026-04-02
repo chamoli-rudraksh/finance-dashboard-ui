@@ -1,0 +1,134 @@
+.wrapper {
+  background: var(--color-bg-surface);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* ── Header ─────────────────────── */
+.th {
+  padding: var(--space-3) var(--space-5);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--color-text-subtle);
+  background: var(--color-bg-subtle);
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
+  cursor: pointer;
+  white-space: nowrap;
+  user-select: none;
+  transition: color var(--transition-fast);
+}
+
+.th:hover { color: var(--color-text-base); }
+.th.right { text-align: right; }
+
+.sortIcon {
+  margin-left: var(--space-1);
+  opacity: 0.35;
+}
+
+.sortIcon.sortActive {
+  opacity: 1;
+  color: var(--color-primary);
+}
+
+/* ── Rows ──────────────────────── */
+.row {
+  transition: background-color var(--transition-fast);
+}
+
+/* Zebra striping */
+.row:nth-child(even) {
+  background-color: var(--color-bg-subtle);
+}
+
+.row:hover {
+  background-color: var(--color-primary-subtle) !important;
+}
+
+.row:not(:last-child) .td {
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* ── Cells ──────────────────────── */
+.td {
+  padding: var(--space-4) var(--space-5);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-base);
+  vertical-align: middle;
+}
+
+.td.right { text-align: right; }
+
+.txTitle {
+  font-weight: 600;
+  color: var(--color-text-base);
+}
+
+.txDate {
+  color: var(--color-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.incomeAmount {
+  color: var(--color-income);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.expenseAmount {
+  color: var(--color-expense);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Action buttons ─────────────── */
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-1);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.row:hover .actions {
+  opacity: 1;
+}
+
+.editBtn, .deleteBtn {
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.editBtn { color: var(--color-text-subtle); }
+.editBtn:hover {
+  background: var(--color-primary-subtle);
+  color: var(--color-primary);
+}
+
+.deleteBtn { color: var(--color-text-subtle); }
+.deleteBtn:hover {
+  background: var(--color-expense-bg);
+  color: var(--color-expense);
+}
+
+/* ── Responsive ─────────────────── */
+@media (max-width: 640px) {
+  .wrapper { overflow-x: auto; }
+  .table { min-width: 560px; }
+}

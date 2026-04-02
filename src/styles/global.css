@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import './variables.css';
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+@keyframes float-blob-1 {
+  0% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(5vw, -5vh) scale(1.1); }
+  66% { transform: translate(-3vw, 4vh) scale(0.9); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+@keyframes float-blob-2 {
+  0% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-5vw, 6vh) scale(1.2); }
+  66% { transform: translate(4vw, -3vh) scale(0.85); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+@keyframes float-blob-3 {
+  0% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(3vw, 5vh) scale(0.95); }
+  66% { transform: translate(-4vw, -4vh) scale(1.15); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+body {
+  font-family: var(--font-family-base);
+  background-color: var(--color-bg-base);
+  color: var(--color-text-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Base environment blobs for immersive gradient animations */
+body::before,
+body::after,
+#root::before {
+  content: "";
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+body::before {
+  top: -10%;
+  right: -5%;
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, rgba(52, 211, 153, 0.4), rgba(52, 211, 153, 0));
+  animation: float-blob-1 18s infinite alternate ease-in-out;
+}
+
+body::after {
+  bottom: -15%;
+  left: -10%;
+  width: 60vw;
+  height: 60vw;
+  background: radial-gradient(circle, rgba(14, 164, 114, 0.35), rgba(14, 164, 114, 0));
+  animation: float-blob-2 22s infinite alternate ease-in-out;
+}
+
+#root::before {
+  bottom: 20%;
+  right: 20%;
+  width: 40vw;
+  height: 40vw;
+  background: radial-gradient(circle, rgba(124, 99, 240, 0.15), rgba(124, 99, 240, 0));
+  animation: float-blob-3 25s infinite alternate ease-in-out;
+}
+
+.dark body::before {
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.25), transparent 60%);
+}
+.dark body::after {
+  background: radial-gradient(circle, rgba(14, 164, 114, 0.35), transparent 60%);
+}
+.dark #root::before {
+  background: radial-gradient(circle, rgba(124, 99, 240, 0.2), transparent 60%);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  background: none;
+}
+
+button { cursor: pointer; }
+ul, ol { list-style: none; }
+
+/* Refined scrollbar */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-strong);
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--color-text-subtle); }
+
+/* Focus ring — accessible, minimal */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0;
+  margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border-width: 0;
+}
+
+/* Glassmorphism Helper Classes */
+.glass-effect {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* Auto apply glass to common surface components by inferring class names */
+div[class*="sidebar" i],
+div[class*="topbar" i],
+div[class*="card_card" i],
+div[class*="card " i],
+div[class*="modal_content" i],
+div[class*="table_tableContainer" i],
+div[class*="filters_container" i] {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+

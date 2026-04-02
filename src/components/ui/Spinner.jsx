@@ -1,0 +1,7 @@
+import styles from './Spinner.module.css';
+
+function Spinner({ size = 'md' }) {
+  return <div className={`${styles.spinner} ${styles[size]}`} role="status" aria-label="Loading" />;
+}
+
+export default Spinner;

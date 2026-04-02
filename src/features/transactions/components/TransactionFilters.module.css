@@ -1,0 +1,189 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+  flex-wrap: wrap;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+/* Search */
+.searchBox {
+  position: relative;
+  flex: 1;
+  min-width: 200px;
+  max-width: 300px;
+}
+
+.searchIcon {
+  position: absolute;
+  left: var(--space-3);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-subtle);
+  display: flex;
+  pointer-events: none;
+}
+
+.searchInput {
+  width: 100%;
+  height: 38px;
+  background: var(--color-bg-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 0 var(--space-3) 0 var(--space-8);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-base);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.searchInput::placeholder { color: var(--color-text-subtle); }
+
+.searchInput:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-subtle);
+}
+
+/* Selects & Date Inputs */
+.select, .dateInput {
+  height: 38px;
+  background: var(--color-bg-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 0 var(--space-3);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-text-base);
+  cursor: pointer;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.select:focus, .dateInput:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-subtle);
+}
+
+/* Type toggle */
+.typeToggle {
+  display: flex;
+  background: var(--color-bg-subtle);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  height: 38px;
+}
+
+.typeBtn {
+  padding: 0 var(--space-4);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-text-muted);
+  transition: all var(--transition-fast);
+  border-right: 1px solid var(--color-border);
+  cursor: pointer;
+}
+
+.typeBtn:last-child { border-right: none; }
+
+.typeBtn.active {
+  background: var(--color-bg-surface);
+  color: var(--color-text-base);
+  font-weight: 600;
+  box-shadow: var(--shadow-xs);
+}
+
+.typeBtn.income.active { color: var(--color-income); }
+.typeBtn.expense.active { color: var(--color-expense); }
+
+/* Clear */
+.clearBtn {
+  height: 38px;
+  padding: 0 var(--space-3);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-text-muted);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-surface);
+  transition: all var(--transition-fast);
+}
+
+.clearBtn:hover {
+  color: var(--color-expense);
+  border-color: var(--color-expense);
+  background: var(--color-expense-bg);
+}
+
+/* Action Controls (Export + Add) */
+.actionControls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+/* Export Group */
+.exportGroup {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.exportBtn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  height: 38px;
+  padding: 0 var(--space-3);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  background: var(--color-bg-surface);
+  color: var(--color-text-base);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.exportBtn:hover {
+  background: var(--color-bg-subtle);
+  border-color: var(--color-text-subtle);
+}
+
+/* Add button */
+.addBtn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  height: 38px;
+  padding: 0 var(--space-5);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  background: var(--color-primary);
+  color: white;
+  border-radius: var(--radius-lg);
+  transition: background-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+  white-space: nowrap;
+  flex-shrink: 0;
+  letter-spacing: 0.01em;
+}
+
+.addBtn:hover {
+  background: var(--color-primary-hover);
+  box-shadow: 0 4px 14px var(--color-primary-glow);
+  transform: translateY(-1px);
+}
+
+.addBtn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}

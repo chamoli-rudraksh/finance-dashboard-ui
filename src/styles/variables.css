@@ -1,0 +1,123 @@
+:root {
+  --font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+  --radius-full: 9999px;
+
+  --sidebar-width: 240px;
+  --sidebar-collapsed-width: 64px;
+  --topbar-height: 64px;
+
+  --color-bg-base: #ecfdf5;
+  --color-bg-surface: rgba(255, 255, 255, 0.65);
+  --color-bg-elevated: rgba(255, 255, 255, 0.85);
+  --color-bg-hover: rgba(240, 253, 249, 0.7);
+  --color-bg-subtle: rgba(247, 254, 251, 0.5);
+
+  --color-text-base: #052e2b;
+  --color-text-muted: #3f5f5c;
+  --color-text-subtle: #7a9a97;
+
+  --color-border: rgba(217, 243, 236, 0.6);
+  --color-border-strong: rgba(191, 231, 221, 0.9);
+
+  --color-primary: #0ea472;
+  --color-primary-hover: #0b8f63;
+  --color-primary-subtle: rgba(14, 164, 114, 0.08);
+  --color-primary-glow: rgba(14, 164, 114, 0.25);
+
+  --color-income: #0ea472;
+  --color-income-hover: #0b8f63;
+  --color-income-bg: #dcfaf0;
+  --color-income-text: #065740;
+
+  --color-expense: #e63946;
+  --color-expense-hover: #c8303c;
+  --color-expense-bg: #fdecea;
+  --color-expense-text: #8b1c23;
+
+  --color-success: #0ea472;
+  --color-warning: #f4a118;
+  --color-danger: #e63946;
+
+  --chart-1: #0ea472;
+  --chart-2: #4361ee;
+  --chart-3: #f4a118;
+  --chart-4: #e63946;
+  --chart-5: #7c63f0;
+  --chart-6: #0ab3c8;
+  --chart-7: #f06c2f;
+  --chart-8: #d44b8a;
+
+  --shadow-xs: 0 1px 2px 0 rgb(5 46 43 / 0.04);
+  --shadow-sm: 0 1px 3px 0 rgb(5 46 43 / 0.06), 0 1px 2px -1px rgb(5 46 43 / 0.04);
+  --shadow-md: 0 4px 8px -2px rgb(5 46 43 / 0.08), 0 2px 4px -2px rgb(5 46 43 / 0.05);
+  --shadow-lg: 0 12px 20px -4px rgb(5 46 43 / 0.1), 0 4px 8px -4px rgb(5 46 43 / 0.06);
+  --shadow-xl: 0 24px 36px -6px rgb(5 46 43 / 0.12), 0 8px 16px -6px rgb(5 46 43 / 0.07);
+  --shadow-card: 0 8px 32px -4px rgba(14, 164, 114, 0.08), 0 4px 16px -2px rgba(5, 46, 43, 0.05);
+  --shadow-card-hover: 0 16px 48px -8px rgba(14, 164, 114, 0.2), 0 8px 24px -4px rgba(5, 46, 43, 0.08);
+
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 380ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark {
+  --bg-gradient: linear-gradient(135deg, #ecfdf5, #f0fdf9);
+  
+  --color-bg-base: #0a0e17; /* Sleek midnight deep bluish-black */
+  --color-bg-surface: rgba(15, 23, 42, 0.55); /* Dark slate glass */
+  --color-bg-elevated: rgba(30, 41, 59, 0.65); /* Elevated slate */
+  --color-bg-hover: rgba(51, 65, 85, 0.4);
+  --color-bg-subtle: rgba(15, 23, 42, 0.3);
+
+  --color-text-base: #f8fafc;
+  --color-text-muted: #cbd5e1;
+  --color-text-subtle: #94a3b8;
+
+  --color-border: rgba(52, 211, 153, 0.15);
+  --color-border-strong: rgba(52, 211, 153, 0.35);
+
+  --color-primary: #34d399;
+  --color-primary-hover: #10b981;
+  --color-primary-subtle: rgba(52, 211, 153, 0.12);
+  --color-primary-glow: rgba(52, 211, 153, 0.2);
+
+  --color-income: #34d399;
+  --color-income-bg: rgba(52, 211, 153, 0.12);
+  --color-income-text: #bbf7d0;
+
+  --color-expense: #f04452;
+  --color-expense-bg: rgba(240, 68, 82, 0.12);
+  --color-expense-text: #f99ba3;
+
+  --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.4), 0 1px 2px -1px rgb(0 0 0 / 0.3);
+  --shadow-md: 0 4px 8px -2px rgb(0 0 0 / 0.5), 0 2px 4px -2px rgb(0 0 0 / 0.4);
+  --shadow-lg: 0 12px 20px -4px rgb(0 0 0 / 0.55), 0 4px 8px -4px rgb(0 0 0 / 0.45);
+  --shadow-xl: 0 24px 36px -6px rgb(0 0 0 / 0.6), 0 8px 16px -6px rgb(0 0 0 / 0.5);
+  --shadow-card: 0 8px 32px -4px rgba(0, 0, 0, 0.5), 0 2px 8px -2px rgba(52, 211, 153, 0.05);
+  --shadow-card-hover: 0 16px 48px -8px rgba(0, 0, 0, 0.6), 0 8px 24px -4px rgba(52, 211, 153, 0.15);
+}

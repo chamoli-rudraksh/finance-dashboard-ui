@@ -1,0 +1,99 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.label {
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  color: var(--color-text-base);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.input {
+  height: 42px;
+  padding: 0 var(--space-4);
+  background: var(--color-bg-subtle);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-text-base);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+  width: 100%;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background: var(--color-bg-surface);
+  box-shadow: 0 0 0 3px var(--color-primary-subtle);
+}
+
+/* Type selector */
+.typeRow {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.typeOption {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 42px;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  color: var(--color-text-muted);
+  letter-spacing: 0.02em;
+}
+
+.typeOption:hover {
+  border-color: var(--color-border-strong);
+  color: var(--color-text-base);
+  background: var(--color-bg-hover);
+}
+
+.typeOption.income.active {
+  border-color: var(--color-income);
+  background: var(--color-income-bg);
+  color: var(--color-income-text);
+}
+
+.typeOption.expense.active {
+  border-color: var(--color-expense);
+  background: var(--color-expense-bg);
+  color: var(--color-expense-text);
+}
+
+.srOnly {
+  position: absolute; width: 1px; height: 1px; padding: 0;
+  margin: -1px; overflow: hidden; clip: rect(0,0,0,0);
+}
+
+.footer {
+  display: flex;
+  gap: var(--space-3);
+  justify-content: flex-end;
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+  margin-top: var(--space-1);
+}

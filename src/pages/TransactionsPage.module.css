@@ -1,0 +1,64 @@
+.loadingWrap {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-12);
+}
+
+.deleteBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.deleteText {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.deleteText strong {
+  color: var(--color-text-base);
+}
+
+.deleteActions {
+  display: flex;
+  gap: var(--space-3);
+  justify-content: flex-end;
+}
+
+.cancelBtn {
+  height: 36px;
+  padding: 0 var(--space-4);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-muted);
+  background: var(--color-bg-base);
+  transition: all var(--transition-fast);
+}
+
+.cancelBtn:hover {
+  background: var(--color-bg-surface);
+  color: var(--color-text-base);
+}
+
+.confirmDeleteBtn {
+  height: 36px;
+  padding: 0 var(--space-4);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  background: var(--color-expense);
+  color: white;
+  border-radius: var(--radius-md);
+  transition: opacity var(--transition-fast);
+}
+
+.confirmDeleteBtn:hover:not(:disabled) {
+  opacity: 0.85;
+}
+
+.confirmDeleteBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

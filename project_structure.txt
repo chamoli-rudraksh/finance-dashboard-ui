@@ -1,0 +1,103 @@
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
+├── public
+│   ├── favicon.svg
+│   └── icons.svg
+├── README.md
+├── src
+│   ├── App.jsx
+│   ├── assets
+│   │   ├── hero.png
+│   │   ├── images
+│   │   │   └── empty-state.svg
+│   │   ├── react.svg
+│   │   └── vite.svg
+│   ├── components
+│   │   ├── feedback
+│   │   │   ├── Toast.jsx
+│   │   │   └── Toast.module.css
+│   │   ├── layout
+│   │   │   ├── Layout.jsx
+│   │   │   ├── Layout.module.css
+│   │   │   ├── PageContainer.jsx
+│   │   │   ├── PageContainer.module.css
+│   │   │   ├── Sidebar.jsx
+│   │   │   ├── Sidebar.module.css
+│   │   │   ├── Topbar.jsx
+│   │   │   └── Topbar.module.css
+│   │   └── ui
+│   │       ├── Badge.jsx
+│   │       ├── Badge.module.css
+│   │       ├── Button.jsx
+│   │       ├── Button.module.css
+│   │       ├── EmptyState.jsx
+│   │       ├── EmptyState.module.css
+│   │       ├── Modal.jsx
+│   │       ├── Modal.module.css
+│   │       ├── Spinner.jsx
+│   │       └── Spinner.module.css
+│   ├── constants
+│   │   └── categories.js
+│   ├── features
+│   │   ├── dashboard
+│   │   │   ├── components
+│   │   │   │   ├── BalanceChart.jsx
+│   │   │   │   ├── BalanceChart.module.css
+│   │   │   │   ├── SpendingBreakdownChart.jsx
+│   │   │   │   ├── SpendingBreakdownChart.module.css
+│   │   │   │   ├── SummaryCards.jsx
+│   │   │   │   └── SummaryCards.module.css
+│   │   │   └── hooks
+│   │   │       └── useDashboardStats.js
+│   │   ├── insights
+│   │   │   ├── components
+│   │   │   │   ├── CategoryBreakdownTable.jsx
+│   │   │   │   ├── CategoryBreakdownTable.module.css
+│   │   │   │   ├── HighestSpendingCard.jsx
+│   │   │   │   ├── InsightCards.jsx
+│   │   │   │   ├── InsightCards.module.css
+│   │   │   │   ├── MonthlyComparison.jsx
+│   │   │   │   ├── MonthlyComparisonChart.jsx
+│   │   │   │   └── MonthlyComparisonChart.module.css
+│   │   │   └── hooks
+│   │   │       └── useInsights.js
+│   │   └── transactions
+│   │       ├── components
+│   │       │   ├── TransactionFilters.jsx
+│   │       │   ├── TransactionFilters.module.css
+│   │       │   ├── TransactionForm.jsx
+│   │       │   ├── TransactionForm.module.css
+│   │       │   ├── TransactionTable.jsx
+│   │       │   └── TransactionTable.module.css
+│   │       └── hooks
+│   │           └── useFilteredTransactions.js
+│   ├── hooks
+│   │   ├── useLocalStorage.js
+│   │   ├── useTheme.js
+│   │   └── useWindowSize.js
+│   ├── main.jsx
+│   ├── pages
+│   │   ├── DashboardPage.jsx
+│   │   ├── DashboardPage.module.css
+│   │   ├── InsightsPage.jsx
+│   │   ├── TransactionsPage.jsx
+│   │   └── TransactionsPage.module.css
+│   ├── services
+│   │   ├── mockApiService.js
+│   │   └── mockData.js
+│   ├── store
+│   │   ├── app
+│   │   │   └── useAppStore.js
+│   │   ├── role
+│   │   │   └── useRoleStore.js
+│   │   └── transactions
+│   │       └── useTransactionStore.js
+│   ├── styles
+│   │   ├── global.css
+│   │   └── variables.css
+│   └── utils
+│       └── formatters.js
+└── vite.config.js

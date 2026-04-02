@@ -1,0 +1,40 @@
+.shell {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--color-bg-base);
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: var(--sidebar-width);
+  transition: margin-left var(--transition-normal);
+  min-width: 0;
+}
+
+.main.collapsed {
+  margin-left: var(--sidebar-collapsed-width);
+}
+
+.content {
+  flex: 1;
+  padding: var(--space-6) var(--space-8);
+  overflow-y: auto;
+}
+
+.toastStack {
+  position: fixed;
+  bottom: var(--space-6);
+  right: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  z-index: 9999;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .main, .main.collapsed { margin-left: 0; }
+  .content { padding: var(--space-5) var(--space-4); }
+}
